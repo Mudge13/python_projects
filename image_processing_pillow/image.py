@@ -1,0 +1,20 @@
+from PIL import Image, ImageFilter
+
+img = Image.open("pokedex/pikachu.jpg")
+print(img.size)
+print(img.mode)
+# print(dir(img))
+filtered_img = img.filter(ImageFilter.BLUR)
+grey_img = img.convert('L')
+filtered_img.save("blured.png")
+grey_img.save("oldtimey.png")
+# grey_img.show()
+# crooked_img = grey_img.rotate(125)
+# crooked_img.save("titled.png")
+# crooked_img.show()
+
+box = (0, 0, 400, 400)
+region = img.crop(box)
+region.save("cropped.png")
+region.show()
+img.show()
