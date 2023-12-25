@@ -1,1 +1,2 @@
-# my_python_projects
+# 🐍 My Python Repo 🐍
+
